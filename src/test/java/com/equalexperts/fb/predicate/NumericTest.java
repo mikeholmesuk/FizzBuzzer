@@ -58,4 +58,42 @@ public class NumericTest {
         // Then
         assertThat(result).isFalse();
     }
+
+    @Test
+    public void containsDigitReturnsTrueIfNumberContainsRequestedDigitOnly() {
+        // Given
+        Integer valueToTest = RDG.integer(Range.closed(0, 9)).next();
+
+        // When
+        Boolean result = Numeric.containsDigit(valueToTest).test(valueToTest);
+
+        // Then
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void containsDigitReturnsTrueIfNumberBeginsWithRequestedDigit() {
+        // Given
+        Integer valueToTest = RDG.integer(Range.closed(0, 9)).next();
+        Integer randomisedNumber = Integer.parseInt(valueToTest.toString() + RDG.integer(Range.closed(0, maxRandomNumber)).next().toString());
+
+        // When
+        Boolean result = Numeric.containsDigit(valueToTest).test(randomisedNumber);
+
+        // Then
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void containsDigitReturnsTrueIfNumberEndsWithRequestedDigit() {
+        // Given
+        Integer valueToTest = RDG.integer(Range.closed(0, 9)).next();
+        Integer randomisedNumber = Integer.parseInt(RDG.integer(Range.closed(0, maxRandomNumber)).next().toString()+ valueToTest.toString());
+
+        // When
+        Boolean result = Numeric.containsDigit(valueToTest).test(randomisedNumber);
+
+        // Then
+        assertThat(result).isTrue();
+    }
 }

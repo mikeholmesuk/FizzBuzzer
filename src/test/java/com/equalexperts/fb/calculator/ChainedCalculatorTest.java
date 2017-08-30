@@ -43,9 +43,9 @@ public class ChainedCalculatorTest {
     }
 
     @Test
-    public void numberThreeReturnsFizz() {
+    public void numberSixReturnsFizz() {
         // Given
-        Integer valueToTest = 3;
+        Integer valueToTest = 6;
 
         // When
         String result = chainedCalculator.calculateFromNumber(valueToTest);
@@ -68,9 +68,9 @@ public class ChainedCalculatorTest {
     }
 
     @Test
-    public void anyPositiveNumberDivisibleByFifteenReturnsFizzBuzz() {
+    public void positiveNumberDivisibleByFifteenReturnsFizzBuzz() {
         // Given
-        Integer valueToTest = RDG.integer(Range.closed(1, maxRandomNumber)).next() * 15;
+        Integer valueToTest = 15;
 
         // When
         String result = chainedCalculator.calculateFromNumber(valueToTest);

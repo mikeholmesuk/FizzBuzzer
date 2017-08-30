@@ -13,9 +13,9 @@ public class FizzBuzzerTest {
     private FizzBuzzer fizzBuzzer;
 
     private String[] fizzBuzzSequence = {
-            "1", "2", "fizz", "4", "buzz",
+            "1", "2", "lucky", "4", "buzz",
             "fizz", "7", "8", "fizz", "buzz",
-            "11", "fizz", "13", "14", "fizzbuzz",
+            "11", "fizz", "lucky", "14", "fizzbuzz",
             "16", "17", "fizz", "19", "buzz"
     };
 
@@ -37,7 +37,7 @@ public class FizzBuzzerTest {
     }
 
     @Test
-    public void firstDivisibleByThreeElementIsFizz() {
+    public void firstDivisibleByThreeElementIsLucky() {
         // Given
         Integer numberToGenerate = 3;
 
@@ -45,7 +45,19 @@ public class FizzBuzzerTest {
         String[] result = fizzBuzzer.generateFizzBuzz(numberToGenerate);
 
         // Then
-        assertThat(result).contains("fizz", atIndex(2));
+        assertThat(result).contains("lucky", atIndex(2));
+    }
+
+    @Test
+    public void secondDivisibleByThreeElementIsFizz() {
+        // Given
+        Integer numberToGenerate = 6;
+
+        // When
+        String[] result = fizzBuzzer.generateFizzBuzz(numberToGenerate);
+
+        // Then
+        assertThat(result).contains("fizz", atIndex(5));
     }
 
     @Test

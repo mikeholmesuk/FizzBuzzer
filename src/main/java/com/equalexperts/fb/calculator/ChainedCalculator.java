@@ -7,9 +7,10 @@ public class ChainedCalculator implements FizzBuzzCalculator {
     private Classifier root;
 
     public ChainedCalculator() {
-        root = new FizzBuzzClassifier();
+        root = new LuckyClassifier();
 
-        root.registerNext(new FizzClassifier())
+        root.registerNext(new FizzBuzzClassifier())
+                .registerNext(new FizzClassifier())
                 .registerNext(new BuzzClassifier())
                 .registerNext(new NumberClassifier());
     }

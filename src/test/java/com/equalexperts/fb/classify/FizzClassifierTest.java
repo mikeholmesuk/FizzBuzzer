@@ -56,7 +56,7 @@ public class FizzClassifierTest {
     @Test
     public void anyNonDivisibleByThreeValueCallsNextGetStringFromNumberOnly() {
         // Given
-        Integer valueToTest = RDG.integer(Range.closed(1, 4)).next();
+        Integer valueToTest = RDG.integer(Range.closed(1, 2)).next();
 
         // When
         fizzClassifierToTest.getStringFromNumber(valueToTest);
