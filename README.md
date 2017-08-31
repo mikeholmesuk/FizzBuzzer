@@ -52,6 +52,13 @@ Welcome to Fizz-Buzz
 
 Output from the final phase is as follows:
 
+```$xslt
+Welcome to Fizz-Buzz
+--------------------
+
+1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz fizz 22 lucky fizz buzz 26 fizz 28 29 lucky lucky lucky lucky lucky lucky lucky lucky lucky lucky buzz 41 fizz lucky 44 fizzbuzz 46 47 fizz 49 buzz fizz 52 lucky fizz buzz 56 fizz 58 59 fizzbuzz 61 62 lucky 64 buzz fizz 67 68 fizz buzz 71 fizz lucky 74 fizzbuzz 76 77 fizz 79 buzz fizz 82 lucky fizz buzz 86 fizz 88 89 fizzbuzz 91 92 lucky 94 buzz fizz 97 98 fizz buzz
+fizz: 21 buzz: 13 fizzbuzz: 5 lucky: 19 integer: 42
+```
 
 ### Libraries Used
 
