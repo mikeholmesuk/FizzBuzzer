@@ -3,6 +3,7 @@ package com.equalexperts.fb;
 import com.equalexperts.fb.calculator.ChainedCalculator;
 import com.equalexperts.fb.fizzbuzz.FizzBuzzer;
 import com.equalexperts.fb.output.FizzBuzzResults;
+import com.equalexperts.fb.output.FizzBuzzStats;
 
 public class Application {
 
@@ -14,5 +15,6 @@ public class Application {
         FizzBuzzer fizzBuzzer = new FizzBuzzer(new ChainedCalculator());
 
         new FizzBuzzResults().printResults(fizzBuzzer.generateFizzBuzz(100));
+        new FizzBuzzStats().printResults(fizzBuzzer.generateFizzBuzz(100));
     }
 }
